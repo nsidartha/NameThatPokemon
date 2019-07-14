@@ -179,6 +179,7 @@ function gameStart(){
     
     numberOfBlanks = lettersInSelectedPokemon.length;
     
+    numberofGuesses = 16;
     currentPokemon = [];
 
     for (var index = 0; index < numberOfBlanks.length; index++) {
@@ -224,15 +225,14 @@ function letterChecker(params) {
     
     else {
 
-        if (pokemonList150.indexOf(params) != -1) {
+        if (pokemonList150.indexOf(params) > -1) {
             
         } else {
-            
-        wrongGuess.push(params);
-        numberofGuesses--;
+            wrongGuess.push(params);
+            numberofGuesses--;
             
         }
-        
+       
     }
     
 }
